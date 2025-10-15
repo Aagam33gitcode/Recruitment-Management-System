@@ -17,21 +17,21 @@ public class User {
     private Long id;
 
     @Column(nullable = false)
-    private String name; // [cite: 27]
+    private String name;
 
     @Column(nullable = false, unique = true)
-    private String email; // [cite: 28]
+    private String email;
 
     @Column(nullable = false)
-    private String passwordHash; // [cite: 31]
+    private String passwordHash;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private UserType userType; // [cite: 30]
+    private UserType userType;
 
-    private String profileHeadline; // [cite: 32]
-    private String address; // [cite: 29]
+    private String profileHeadline;
+    private String address;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Profile profile; // [cite: 33]
+    private Profile profile;
 }
